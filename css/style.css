@@ -1,0 +1,283 @@
+:root {
+  --blanco: #ffffff;
+  --primario: rgb(255, 193, 7);
+  --secundario: rgb(0, 97, 53);
+  --gris: rgb(0, 97, 53);
+  --oscuro: #212121;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  scroll-snap-type: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.prefooter-logos {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 12fr;
+}
+
+.prefooter-logos img {
+  max-height: 100px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .prefooter-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .prefooter-logos img {
+    margin: 20px 25px;
+  }
+}
+
+.uanl-title-to-site {
+  font-family: "Times New Roman", serif;
+  margin-bottom: 0;
+}
+
+#top_bar,
+.top-bar {
+  background-color: #f4f2ed;
+}
+
+.hero-text {
+  margin: 0 9rem;
+}
+
+@media (max-width: 768px) {
+  /* Oculta el elemento deseado en dispositivos pequeños */
+  .hidden-xs {
+    display: none;
+  }
+
+  .hero-text {
+    margin: 0;
+  }
+}
+
+.navbar {
+  background-color: rgb(0, 97, 53) !important;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.contacto {
+  background-color: rgb(0, 97, 53) !important;
+}
+
+.hero {
+  height: 450px;
+  background-image: url(../img/fime-fachada.png);
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.contenido-hero {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+  color: var(--blanco);
+}
+.boton {
+  background-color: transparent;
+  color: var(--blanco);
+  margin-top: 0.5rem;
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border: 2px solid #ffffff;
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: #ffffff70;
+}
+
+.formulario {
+  background-color: var(--gris);
+  padding: 2rem;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .formulario {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+.contenedor-campos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.campo {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.campo label {
+  color: var(--blanco);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+@media (min-width: 480px) {
+  .campo label {
+    flex: 0 0 90px;
+  }
+}
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="mail"],
+.campo textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  :is(.campo)
+    :is(
+      input[type="text"],
+      input[type="text"],
+      input[type="tel"],
+      input[type="mail"],
+      textarea
+    ) {
+    flex: 1;
+  }
+}
+
+.w-100 {
+  flex: 0 0 100%;
+}
+.campo textarea {
+  height: 4rem;
+}
+
+.enviar {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 480px) {
+  .campo {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .campo {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+.servicios {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+  }
+}
+.servicio {
+  text-align: center;
+}
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sombra {
+  margin: 5rem auto;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.iconos1 {
+  background-image: url(/LogoUANL.jpg);
+  display: flex;
+  height: 150px;
+  width: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+}
+.iconos2 {
+  display: flex;
+  height: 150px;
+  width: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+}
+a {
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #333333a8;
+  color: #fff;
+}
+
+.footer h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
